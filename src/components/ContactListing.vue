@@ -14,15 +14,22 @@
       </thead>
 
       <tbody>
-        <tr>
-          <td><router-link :to=" { name: 'edit', params: { id: 1 } } ">John Doe</router-link></td>
-          <td>john@doe.com</td>
-        </tr>
-        <tr>
-          <td><router-link :to=" { name: 'edit', params: { id: 2 } } ">Joe Bloggs</router-link></td>
-          <td>joe@bloggs.com</td>
+        <tr v-for=" c in contacts ">
+          <td><router-link :to=" { name: 'edit', params: { id: c.id } } ">{{ c.name }}</router-link></td>
+          <td>{{ c.email }}</td>
         </tr>
       </tbody>
     </table>
   </div>
 </template>
+
+<script>
+import contacts from './contacts.json'
+
+export default {
+  name: 'ContactListing',
+  data() {
+    return { contacts }
+  }
+}
+</script>
