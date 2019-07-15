@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+    <h1>Contacts App</h1>
+
+    <ContactListing class="mt-4" />
+
+    <CreateContact class="mt-4" />
+
+    <EditContact class="mt-4" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ContactListing from './components/ContactListing.vue'
+import CreateContact from './components/CreateContact.vue'
+import EditContact from './components/EditContact.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    ContactListing,
+    CreateContact,
+    EditContact
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import 'https://unpkg.com/bootstrap@4.3.1/dist/css/bootstrap.min.css';
+
+h1 {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
 }
 </style>
