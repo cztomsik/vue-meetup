@@ -2,11 +2,7 @@
   <div id="app" class="container">
     <h1>Contacts App</h1>
 
-    <ContactListing class="mt-4" />
-
-    <CreateContact class="mt-4" />
-
-    <EditContact class="mt-4" />
+    <router-view />
   </div>
 </template>
 

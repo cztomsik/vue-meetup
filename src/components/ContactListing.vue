@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <a href="" class="btn btn-primary float-right">Create new</a>
+      <router-link :to="{ name: 'create' }" class="btn btn-primary float-right">Create new</router-link>
       <h3>Contact listing</h3>
     </header>
 
@@ -15,11 +15,11 @@
 
       <tbody>
         <tr>
-          <td><a href="">John Doe</a></td>
+          <td><router-link :to=" { name: 'edit', params: { id: 1 } } ">John Doe</router-link></td>
           <td>john@doe.com</td>
         </tr>
         <tr>
-          <td><a href="">Joe Bloggs</a></td>
+          <td><router-link :to=" { name: 'edit', params: { id: 2 } } ">Joe Bloggs</router-link></td>
           <td>joe@bloggs.com</td>
         </tr>
       </tbody>
