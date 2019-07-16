@@ -30,12 +30,12 @@ export default {
   methods: {
     async fetchContact() {
       const { id } = this.$route.params
-      this.contact = await fetch('https://jsonplaceholder.typicode.com/users/' + id).then(res => res.json())
+      this.contact = await fetch('http://localhost:3000/contacts/' + id).then(res => res.json())
     },
 
     async update() {
       const { id } = this.$route.params
-      await fetch('https://jsonplaceholder.typicode.com/users/' + id, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.contact) })
+      await fetch('http://localhost:3000/contacts/' + id, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.contact) })
 
       this.$router.push({ name: 'listing' })
     }

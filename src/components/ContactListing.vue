@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     async fetchContacts() {
-      this.contacts = await fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
+      this.contacts = await fetch('http://localhost:3000/contacts').then(res => res.json())
     }
   }
 }

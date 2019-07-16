@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     async save() {
-      await fetch('https://jsonplaceholder.typicode.com/users', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.contact) })
+      await fetch('http://localhost:3000/contacts', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(this.contact) })
 
       this.$router.push({ name: 'listing' })
     }
