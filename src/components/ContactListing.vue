@@ -29,7 +29,15 @@ import contacts from './contacts.json'
 export default {
   name: 'ContactListing',
   data() {
-    return { contacts }
+    return { contacts: [] }
+  },
+  created() {
+    this.fetchContacts()
+  },
+  methods: {
+    async fetchContacts() {
+      this.contacts = await fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
+    }
   }
 }
 </script>

@@ -7,17 +7,8 @@
 </template>
 
 <script>
-import ContactListing from './components/ContactListing.vue'
-import CreateContact from './components/CreateContact.vue'
-import EditContact from './components/EditContact.vue'
-
 export default {
-  name: 'app',
-  components: {
-    ContactListing,
-    CreateContact,
-    EditContact
-  }
+  name: 'app'
 }
 </script>
 
